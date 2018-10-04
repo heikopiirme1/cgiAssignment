@@ -12,4 +12,10 @@ public class DentistVisitEntity {
 
     //TODO implementation
 
+    @Column
+    private String dentist_name;
+
+    @Column
+    private String visit_time;
+
 }
