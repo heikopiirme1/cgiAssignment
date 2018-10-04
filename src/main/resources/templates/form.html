@@ -4,12 +4,18 @@
     <table>
         <tr>
             <td><p th:text="#{dentist.name}">dentist.name</p></td>
-            <td><input type="text" th:field="*{dentistName}"/></td>
+            <td>
+                <select th:field="*{dentistName}">
+                    <option th:value="'Anu Maasikas'" th:text="'Eha Raudreha'"></option>
+                    <option th:value="'Heli Redel'" th:text="'Heli Redel'"></option>
+                    <option th:value="'Mait Kuusevaik'" th:text="'Mait Kuusevaik'"></option>
+                </select>
+            </td>
             <td th:if="${#fields.hasErrors('dentistName')}" th:errors="*{dentistName}">name.error</td>
         </tr>
         <tr>
             <td><p th:text="#{visit.date}">visit.date</p></td>
-            <td><input type="text" th:field="*{visitTime}"/></td>
+            <td><input type="datetime-local" th:field="*{visitTime}"/></td>
             <td th:if="${#fields.hasErrors('visitTime')}" th:errors="*{visitTime}">date.error</td>
         </tr>
         <tr>
