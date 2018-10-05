@@ -1,5 +1,9 @@
-<html>
+<html xmlns:th="http://www.w3.org/1999/xhtml">
 <body>
-<p th:text="#{registration.ok}">registration.ok</p>
+<div th:each="visit : ${visits}">
+    <p th:text="${visit.visitId}"></p>
+    <p th:text="${visit.dentistName}"></p>
+    <p th:text="${visit.visitTime}"></p>
+</div>
 </body>
 </html>

@@ -13,14 +13,25 @@ public class DentistVisitDTO {
 
     @NotNull
     @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
-    Date visitTime;
+    String visitTime;
+
+    long visitId;
 
     public DentistVisitDTO() {
     }
 
-    public DentistVisitDTO(String dentistName, Date visitTime) {
+    public DentistVisitDTO(long visitId, String dentistName, String visitTime) {
+        this.visitId = visitId;
         this.dentistName = dentistName;
         this.visitTime = visitTime;
+    }
+
+    public long getVisitId() {
+        return visitId;
+    }
+
+    public void setVisitId(long visitId) {
+        this.visitId = visitId;
     }
 
     public String getDentistName() {
@@ -31,11 +42,18 @@ public class DentistVisitDTO {
         this.dentistName = dentistName;
     }
 
-    public Date getVisitTime() {
+    public String getVisitTime() {
         return visitTime;
     }
 
-    public void setVisitTime(Date visitTime) {
+    public void setVisitTime(String visitTime) {
         this.visitTime = visitTime;
+    }
+
+    @Override
+    public String toString() {
+        return String.format(
+                "DentistVisitDTO[id='%d', dentistName='%s', visitTime='%s']",
+                visitId, dentistName, visitTime);
     }
 }

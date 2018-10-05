@@ -5,9 +5,11 @@ import com.cgi.dentistapp.service.DentistVisitService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
@@ -28,6 +30,12 @@ public class DentistAppController extends WebMvcConfigurerAdapter {
     @GetMapping("/")
     public String showRegisterForm(DentistVisitDTO dentistVisitDTO) {
         return "form";
+    }
+
+    @RequestMapping("/results")
+    public String visitsList(Model model) {
+        model.addAttribute("visits", dentistVisitService.listAll());
+        return "results";
     }
 
     @PostMapping("/")
