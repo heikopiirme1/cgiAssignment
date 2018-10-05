@@ -9,13 +9,8 @@ public class DentistVisitEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-
-    //TODO implementation
-
-    @Column
     private String dentist_name;
-
-    @Column
     private String visit_time;
 
+    //TODO implementation
 }

@@ -1,12 +1,12 @@
 <html>
 <body>
-<form action="#" th:action="@{/}" th:object="${dentistVisitDTO}" method="post">
+<form action="postRegisterForm" th:action="@{/}" th:object="${dentistVisitDTO}" method="post">
     <table>
         <tr>
             <td><p th:text="#{dentist.name}">dentist.name</p></td>
             <td>
                 <select th:field="*{dentistName}">
-                    <option th:value="'Anu Maasikas'" th:text="'Eha Raudreha'"></option>
+                    <option th:value="'Eha Raudreha'" th:text="'Eha Raudreha'"></option>
                     <option th:value="'Heli Redel'" th:text="'Heli Redel'"></option>
                     <option th:value="'Mait Kuusevaik'" th:text="'Mait Kuusevaik'"></option>
                 </select>

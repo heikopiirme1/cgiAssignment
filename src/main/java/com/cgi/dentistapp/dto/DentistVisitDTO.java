@@ -12,7 +12,7 @@ public class DentistVisitDTO {
     String dentistName;
 
     @NotNull
-    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    @DateTimeFormat(pattern = "yyyy-MM-dd'T'HH:mm")
     Date visitTime;
 
     public DentistVisitDTO() {
