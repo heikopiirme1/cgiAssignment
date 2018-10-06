@@ -1,9 +1,13 @@
 <html xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="../static/css/results.css" th:href="@{/css/results.css}" rel="stylesheet" />
+</head>
 <body>
-<div th:each="visit : ${visits}">
-    <p th:text="${visit.visitId}"></p>
-    <p th:text="${visit.dentistName}"></p>
-    <p th:text="${visit.visitTime}"></p>
+<div class="visitList">
+    <div class="visit" th:each="visit : ${visits}">
+        <div class="listItem"><span class="visitId" th:text="${visit.visitId}"></span> <p class="visitTime" th:text="${'Visiidi aeg: ' + visit.visitTime}"></p> <span class="dentistName" th:text="${visit.dentistName}"></span></div>
+    </div>
 </div>
+
 </body>
 </html>
