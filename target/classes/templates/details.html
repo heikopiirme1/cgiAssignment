@@ -1,10 +1,17 @@
 <html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
-    <title th:text="${'Registreering nr. ' + dentistVisit.visitId}"></title>
+    <title th:text="${'CGI hambaravi: Registreering nr. ' + dentistVisit.visitId}"></title>
     <link href="../static/css/details.css" th:href="@{/css/details.css}" rel="stylesheet" />
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous"/>
 </head>
 <body>
+    <div class="header">
+        <h1 class="headerTitle">CGI hambaravi</h1>
+        <ul class="nav">
+            <li><a class="navLink navItem" th:href="@{/}">Lisa visiit</a></li>
+            <li class="active"><a class="navLink navItem active" th:href="@{/results}">Kõik visiidid</a></li>
+        </ul>
+    </div>
     <div class="visit">
                 <h1 class="headline" th:text="${'Registreering nr. ' + dentistVisit.visitId}"></h1>
                 <select th:required="true"  th:field="*{dentistVisit.dentistName}">
@@ -16,7 +23,7 @@
         <div>
             <button class="editBtn"><i class="far fa-edit"></i></button>
             <button class="deleteBtn"><i class="far fa-trash-alt"></i></button>
-            <button><i class="fas fa-arrow-left"></i></button>
+            <a th:href="@{/results}"><button><i class="fas fa-arrow-left"></i></button></a>
         </div>
 
     </div>

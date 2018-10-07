@@ -1,9 +1,52 @@
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,300,400,700');
 
 body {
     font-family: 'Roboto';
     background-image: url('../img/bgpic.jfif');
     background-size: cover;
+    margin: 0;
+}
+
+.header {
+    height: 70px;
+    background-color: #FFF;
+    border-bottom: 1px solid #00b894;
+}
+
+.headerTitle {
+    color: #00b894;
+    display: inline-block;
+    font-weight: 100;
+    padding-left: 35px;
+    margin-top: 15px;
+}
+
+.nav {
+    display: inline-block;
+    font-size: 1.1em;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 65px;
+}
+
+li {
+    display: inline-block;
+    text-decoration: none;
+    padding: 25px;
+    padding-left: 20px;
+    color: #00b894;
+}
+
+.navLink {
+    text-decoration: none;
+    color: #00b894!important;
+    font-weight: 300;
+}
+
+.active {
+    background-color: #00b894;
+    color: #FFF!important;
 }
 
 .id01 {
@@ -14,28 +57,12 @@ body {
     color: #1d1d1d;
 }
 
-.w3-modal-content {
-    position: absolute;
-    top: 20%;
-    left: 40%;
-    width: 20%;
-    background-color: #FFF;
-}
-
-.dim {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background-color: rgba(29, 29, 29, 0.7);
-}
 .visitList {
     width: 25%;
     background-color: #FFF;
     height: 70%;
     margin: 0 auto;
-    margin-top: 10%;
+    margin-top: 5%;
     padding: 10px;
     padding-top: 20px;
     border-radius: 12px 0 0 12px;
@@ -106,5 +133,5 @@ body {
 }
 
 .listItem:hover {
-    background-color: #eff6f9;
+    background-color: rgba(0, 184, 148, 0.02);
 }

@@ -4,6 +4,13 @@
     <title>CGI hambaravi</title>
 </head>
 <body>
+<div class="header">
+    <h1 class="headerTitle">CGI hambaravi</h1>
+    <ul class="nav">
+        <li class="active"><a class="navLink navItem active" href="#">Lisa visiit</a></li>
+        <li><a class="navLink navItem" th:href="@{/results}">Kõik visiidid</a></li>
+    </ul>
+</div>
 <form action="postRegisterForm" th:action="@{/}" th:object="${dentistVisitDTO}" method="post">
     <table>
         <tr>

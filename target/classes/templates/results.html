@@ -1,9 +1,16 @@
 <html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <link href="../static/css/results.css" th:href="@{/css/results.css}" rel="stylesheet" />
-    <title>Kõik registreeringud</title>
+    <title>CGI hambaravi: kõik registreeringud</title>
 </head>
 <body>
+<div class="header">
+    <h1 class="headerTitle">CGI hambaravi</h1>
+    <ul class="nav">
+        <li><a class="navLink navItem" th:href="@{/}">Lisa visiit</a></li>
+        <li class="active"><a class="navLink navItem active" href="#">Kõik visiidid</a></li>
+    </ul>
+</div>
 <div class="visitList">
     <div class="visit" th:each="visit : ${visits}">
         <a class="link" th:href="@{|/results/${visit.visitId}|}">

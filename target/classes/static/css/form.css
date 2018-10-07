@@ -5,12 +5,55 @@ body {
     background-color: #dbdbdb;
     background-image: url('../img/bgpic.jfif');
     background-size: cover;
+    margin: 0;
+}
+
+.header {
+    height: 70px;
+    background-color: #FFF;
+    border-bottom: 1px solid #00b894;
+}
+
+.headerTitle {
+    color: #00b894;
+    display: inline-block;
+    font-weight: 100;
+    padding-left: 35px;
+    margin-top: 15px;
+}
+
+.nav {
+    display: inline-block;
+    font-size: 1.1em;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 65px;
+}
+
+li {
+    display: inline-block;
+    text-decoration: none;
+    padding: 25px;
+    padding-left: 20px;
+    color: #00b894;
+}
+
+.navLink {
+    text-decoration: none;
+    color: #00b894!important;
+    font-weight: 300;
+}
+
+.active {
+    background-color: #00b894;
+    color: #FFF!important;
 }
 
 form {
     width: 20%;
     margin: 0 auto;
-    margin-top: 18%;
+    margin-top: 17%;
     background-color: #FFF;
     text-align: center;
     padding-top: 50px;

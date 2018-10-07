@@ -3,13 +3,63 @@ body {
     background-color: #dbdbdb;
     background-image: url('../img/bgpic.jfif');
     background-size: cover;
+    margin: 0;
+}
+
+body {
+    font-family: 'Roboto';
+    background-image: url('../img/bgpic.jfif');
+    background-size: cover;
+    margin: 0;
+}
+
+.header {
+    height: 70px;
+    background-color: #FFF;
+    border-bottom: 1px solid #00b894;
+}
+
+.headerTitle {
+    color: #00b894;
+    display: inline-block;
+    font-weight: 100;
+    padding-left: 35px;
+    margin-top: 15px;
+}
+
+.nav {
+    display: inline-block;
+    font-size: 1.1em;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 65px;
+}
+
+li {
+    display: inline-block;
+    text-decoration: none;
+    padding: 25px;
+    padding-left: 20px;
+    color: #00b894;
+}
+
+.navLink {
+    text-decoration: none;
+    color: #00b894!important;
+    font-weight: 300;
+}
+
+.active {
+    background-color: #00b894;
+    color: #FFF!important;
 }
 
 .visit {
     background-color: #FFF;
     width: 15%;
     margin: 0 auto;
-    margin-top: 19%;
+    margin-top: 18%;
     padding: 15px 30px 30px 30px;
     text-align: center;
     border-radius: 12px;
@@ -23,6 +73,7 @@ select, input {
     margin-top: 5px;
     border: 1px solid #00b894;
     border-radius: 4px;
+    font-family: 'Roboto';
 }
 
 select {
@@ -48,12 +99,6 @@ button {
     transition: 0.2s;
 }
 
-button:hover {
-    color: #00b894;
-    background-color: #FFF;
-    border: 1px solid #00b894;
-}
-
 .editBtn {
     background-color: #FFF;
     color: #00b894;
@@ -76,6 +121,15 @@ button:hover {
     background-color: #e74c3c;
     color: #FFF;
     border: 1px solid #e74c3c;
+}
+
+button:hover {
+    background-color: #008a6c;
+    border: 1px solid #008a6c;
+}
+
+button a:-webkit-any-link  {
+    color: #FFF;
 }
 
 .headline {
