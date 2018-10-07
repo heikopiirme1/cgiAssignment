@@ -10,6 +10,10 @@ body {
     display: none;
 }
 
+.link, a:-webkit-any-link  {
+    color: #1d1d1d;
+}
+
 .w3-modal-content {
     position: absolute;
     top: 20%;

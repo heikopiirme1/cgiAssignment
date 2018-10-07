@@ -5,7 +5,6 @@ body {
     background-color: #dbdbdb;
     background-image: url('../img/bgpic.jfif');
     background-size: cover;
-
 }
 
 form {
@@ -42,6 +41,7 @@ input {
     padding-left: 9px;
     border: 1px solid #00b894;
     border-radius: 4px;
+    display: block;
 }
 
 .label {

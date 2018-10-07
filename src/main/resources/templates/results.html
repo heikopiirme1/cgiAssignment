@@ -1,15 +1,18 @@
 <html xmlns:th="http://www.w3.org/1999/xhtml">
 <head>
     <link href="../static/css/results.css" th:href="@{/css/results.css}" rel="stylesheet" />
+    <title>Kõik registreeringud</title>
 </head>
 <body>
 <div class="visitList">
     <div class="visit" th:each="visit : ${visits}">
-        <div class="listItem">
-            <span class="visitId" th:text="${visit.visitId}"></span>
-            <p class="visitTime" th:text="${'Visiidi aeg: ' + visit.visitTime}"></p>
-            <span class="dentistName" th:text="${visit.dentistName}"></span>
-        </div>
+        <a class="link" th:href="@{|/results/${visit.visitId}|}">
+            <div class="listItem" >
+                <span class="visitId" th:text="${visit.visitId}"></span>
+                <p class="visitTime" th:text="${'Visiidi aeg: ' + visit.visitTime}"></p>
+                <span class="dentistName" th:text="${visit.dentistName}"></span>
+            </div>
+        </a>
     </div>
 </div>
 

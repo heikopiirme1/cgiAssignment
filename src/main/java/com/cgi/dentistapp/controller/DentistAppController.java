@@ -7,9 +7,7 @@ import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.config.annotation.ViewControllerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
@@ -36,6 +34,13 @@ public class DentistAppController extends WebMvcConfigurerAdapter {
     public String visitsList(Model model) {
         model.addAttribute("visits", dentistVisitService.listAll());
         return "results";
+    }
+
+    @RequestMapping(value="/results/{id}", method= RequestMethod.GET)
+    public String detail(@PathVariable(value="id") long id, Model model) {
+        DentistVisitDTO dentistVisit = dentistVisitService.findById(id);
+        model.addAttribute("dentistVisit", dentistVisit);
+        return "details";
     }
 
     @PostMapping("/")

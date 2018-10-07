@@ -27,6 +27,19 @@ public class DentistVisitService {
         jdbcTemplate.update("INSERT INTO DENTIST_VISIT(ID, DENTIST_NAME, VISIT_TIME) VALUES(DEFAULT, ?, ?)", dentistName, visitTime);
     }
 
+    //Mapib visiidi andmed, et need hiljem listi lisada
+    class DentistVisitRowMapper implements RowMapper<DentistVisitDTO> {
+        @Override
+        public DentistVisitDTO mapRow(ResultSet rs, int rowNum) throws SQLException {
+            DentistVisitDTO dentistVisitDTO = new DentistVisitDTO();
+            dentistVisitDTO.setVisitId(Long.parseLong(rs.getString("id")));
+            dentistVisitDTO.setDentistName(rs.getString("dentist_name"));
+            dentistVisitDTO.setVisitTime(rs.getString("visit_time"));
+            return dentistVisitDTO;
+        }
+
+    }
+
     //Kõik visiidid
     public List<DentistVisitDTO> findAll() {
         return jdbcTemplate.query("SELECT * FROM DENTIST_VISIT", new DentistVisitRowMapper());
@@ -35,7 +48,7 @@ public class DentistVisitService {
     //Üks visiit ID järgi
     public DentistVisitDTO findById(long id) {
         return jdbcTemplate.queryForObject("SELECT * FROM DENTIST_VISIT where id=?", new Object[] { id },
-                new BeanPropertyRowMapper<DentistVisitDTO>(DentistVisitDTO.class));
+                new DentistVisitRowMapper());
     }
 
     //Visiidi kustutamine
@@ -50,18 +63,7 @@ public class DentistVisitService {
     }
 
 
-    //Mapib visiidi andmed, et need hiljem listi lisada
-    class DentistVisitRowMapper implements RowMapper<DentistVisitDTO> {
-        @Override
-        public DentistVisitDTO mapRow(ResultSet rs, int rowNum) throws SQLException {
-            DentistVisitDTO dentistVisitDTO = new DentistVisitDTO();
-            dentistVisitDTO.setVisitId(Long.parseLong(rs.getString("id")));
-            dentistVisitDTO.setDentistName(rs.getString("dentist_name"));
-            dentistVisitDTO.setVisitTime(rs.getString("visit_time"));
-            return dentistVisitDTO;
-        }
 
-    }
 
     //List, et HTMLis kõiki visiite kuvada
     public List<DentistVisitDTO> listAll() {

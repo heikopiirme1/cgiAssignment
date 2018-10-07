@@ -1,0 +1,88 @@
+body {
+    font-family: 'Roboto';
+    background-color: #dbdbdb;
+    background-image: url('../img/bgpic.jfif');
+    background-size: cover;
+}
+
+.visit {
+    background-color: #FFF;
+    width: 15%;
+    margin: 0 auto;
+    margin-top: 19%;
+    padding: 15px 30px 30px 30px;
+    text-align: center;
+    border-radius: 12px;
+    border-top: 2px solid #00b894;
+    box-shadow: 0px 1px 15px 1px rgba(29, 29, 29, 0.3);
+}
+
+select, input {
+    width: 200px;
+    height: 30px;
+    margin-top: 5px;
+    border: 1px solid #00b894;
+    border-radius: 4px;
+}
+
+select {
+    padding-left: 6px;
+}
+
+input {
+    padding-left: 9px;
+}
+
+button {
+    font-family: 'Roboto';
+    font-size: 1em;
+    background-color: #00b894;
+    border: 1px solid #00b894;
+    border-radius: 32px;
+    width: 25%;
+    padding: 10px;
+    cursor: pointer;
+    color: #fff;
+    text-align: center;
+    margin-top: 18px;
+    transition: 0.2s;
+}
+
+button:hover {
+    color: #00b894;
+    background-color: #FFF;
+    border: 1px solid #00b894;
+}
+
+.editBtn {
+    background-color: #FFF;
+    color: #00b894;
+    border: 1px solid #00b894;
+}
+
+.editBtn:hover {
+    background-color: #00b894;
+    color: #FFF;
+    border: 1px solid #00b894;
+}
+
+.deleteBtn {
+    background-color: #FFF;
+    color: #e74c3c;
+    border: 1px solid #e74c3c;
+}
+
+.deleteBtn:hover {
+    background-color: #e74c3c;
+    color: #FFF;
+    border: 1px solid #e74c3c;
+}
+
+.headline {
+    font-size: 2em;
+    font-weight: 100;
+    color: #00b894;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
