@@ -6,6 +6,26 @@ body {
     background-size: cover;
 }
 
+.id01 {
+    display: none;
+}
+
+.w3-modal-content {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 20%;
+    background-color: #FFF;
+}
+
+.dim {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(29, 29, 29, 0.7);
+}
 .visitList {
     width: 25%;
     background-color: #FFF;

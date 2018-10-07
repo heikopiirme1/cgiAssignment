@@ -5,7 +5,11 @@
 <body>
 <div class="visitList">
     <div class="visit" th:each="visit : ${visits}">
-        <div class="listItem"><span class="visitId" th:text="${visit.visitId}"></span> <p class="visitTime" th:text="${'Visiidi aeg: ' + visit.visitTime}"></p> <span class="dentistName" th:text="${visit.dentistName}"></span></div>
+        <div class="listItem">
+            <span class="visitId" th:text="${visit.visitId}"></span>
+            <p class="visitTime" th:text="${'Visiidi aeg: ' + visit.visitTime}"></p>
+            <span class="dentistName" th:text="${visit.dentistName}"></span>
+        </div>
     </div>
 </div>
 

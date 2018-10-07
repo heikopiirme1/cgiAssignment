@@ -1,5 +1,6 @@
 package com.cgi.dentistapp;
 
+import com.cgi.dentistapp.dto.DentistVisitDTO;
 import com.cgi.dentistapp.service.DentistVisitService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -24,6 +25,9 @@ public class DentistAppApplication implements CommandLineRunner {
 
     @Override
     public void run(String... args) throws Exception {
-        logger.info("All users 1 -> {}", repository.findAll());
+        logger.info("All visits 1 -> {}", repository.findAll());
+        logger.info("Visit id 2 -> {}", repository.findById(2));
+        logger.info("Delete visit id 2 -> {}", repository.delete(2));
+        logger.info("Update 3 -> {}", repository.update(new DentistVisitDTO(3, "Name-Updated", "New-Passport")));
     }
 }
