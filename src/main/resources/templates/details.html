@@ -13,19 +13,18 @@
         </ul>
     </div>
     <div class="visit">
-                <h1 class="headline" th:text="${'Registreering nr. ' + dentistVisit.visitId}"></h1>
-                <select th:required="true"  th:field="*{dentistVisit.dentistName}">
-                    <option th:value="'Eha Raudreha'" th:text="'Eha Raudreha'"></option>
-                    <option th:value="'Heli Redel'" th:text="'Heli Redel'" th:selected="true"></option>
-                    <option th:value="'Mait Kuusevaik'" th:text="'Mait Kuusevaik'"></option>
-                </select>
-                <input type="datetime-local" th:field="*{dentistVisit.visitTime}" th:required="true" th:value="${dentistVisit.visitTime}"/>
+        <h1 class="headline" th:text="${'Registreering nr. ' + dentistVisit.visitId}"></h1>
+        <select th:required="true"  th:field="*{dentistVisit.dentistName}">
+            <option th:value="'Eha Raudreha'" th:text="'Eha Raudreha'"></option>
+            <option th:value="'Heli Redel'" th:text="'Heli Redel'" th:selected="true"></option>
+            <option th:value="'Mait Kuusevaik'" th:text="'Mait Kuusevaik'"></option>
+        </select>
+        <input type="datetime-local" th:field="*{dentistVisit.visitTime}" th:required="true" th:value="${dentistVisit.visitTime}"/>
         <div>
             <button class="editBtn"><i class="far fa-edit"></i></button>
             <button class="deleteBtn"><i class="far fa-trash-alt"></i></button>
             <a th:href="@{/results}"><button><i class="fas fa-arrow-left"></i></button></a>
         </div>
-
     </div>
 </body>
 </html>
