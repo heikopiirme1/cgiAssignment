@@ -12,9 +12,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import java.util.Locale;
 
 @SpringBootApplication
-public class DentistAppApplication implements CommandLineRunner {
+public class DentistAppApplication {
 
-    private Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
     DentistVisitService repository;
@@ -23,10 +22,4 @@ public class DentistAppApplication implements CommandLineRunner {
         SpringApplication.run(DentistAppApplication.class, args);
     }
 
-    @Override
-    public void run(String... args) throws Exception {
-        logger.info("All visits 1 -> {}", repository.findAll());
-        logger.info("Delete visit id 2 -> {}", repository.delete(2));
-        logger.info("Visit id 2 -> {}", repository.findById(3));
-    }
 }

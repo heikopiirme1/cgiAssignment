@@ -23,6 +23,7 @@ public class DentistAppController extends WebMvcConfigurerAdapter {
     @Override
     public void addViewControllers(ViewControllerRegistry registry) {
         registry.addViewController("/results").setViewName("results");
+        registry.addViewController("/details").setViewName("details");
     }
 
     @GetMapping("/")
@@ -59,10 +60,10 @@ public class DentistAppController extends WebMvcConfigurerAdapter {
         return "redirect:/results";
     }
 
-    @PostMapping("/results/{id}")
-    public String putRegisterForm(@PathVariable(value="id") long id, @Valid DentistVisitDTO dentistVisitDTO) {
+    @PostMapping("/results/update")
+    public String putRegisterForm(@Valid DentistVisitDTO dentistVisitDTO) {
 
-        dentistVisitService.updateVisit(id, dentistVisitDTO.getDentistName(), dentistVisitDTO.getVisitTime());
+        dentistVisitService.updateVisit(dentistVisitDTO.getVisitId(), dentistVisitDTO.getDentistName(), dentistVisitDTO.getVisitTime());
         return "redirect:/results";
     }
 }

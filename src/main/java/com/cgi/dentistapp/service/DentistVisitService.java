@@ -22,10 +22,6 @@ public class DentistVisitService {
     @Autowired
     JdbcTemplate jdbcTemplate;
 
-    public void addVisit(String dentistName, String visitTime) {
-        //TODO implementation
-        jdbcTemplate.update("INSERT INTO DENTIST_VISIT(ID, DENTIST_NAME, VISIT_TIME) VALUES(DEFAULT, ?, ?)", dentistName, visitTime);
-    }
 
     //Mapib visiidi andmed, et need hiljem listi lisada
     class DentistVisitRowMapper implements RowMapper<DentistVisitDTO> {
@@ -42,7 +38,7 @@ public class DentistVisitService {
 
     //Kõik visiidid
     public List<DentistVisitDTO> findAll() {
-        return jdbcTemplate.query("SELECT * FROM DENTIST_VISIT", new DentistVisitRowMapper());
+        return jdbcTemplate.query("SELECT * FROM DENTIST_VISIT ORDER BY VISIT_TIME", new DentistVisitRowMapper());
     }
 
     //Üks visiit ID järgi
@@ -51,9 +47,10 @@ public class DentistVisitService {
                 new DentistVisitRowMapper());
     }
 
-    //Visiidi kustutamine
-    public int delete(long id) {
-        return jdbcTemplate.update("DELETE FROM DENTIST_VISIT where id=?", new Object[] { id });
+    //Visiidi lisamine
+    public void addVisit(String dentistName, String visitTime) {
+        //TODO implementation
+        jdbcTemplate.update("INSERT INTO DENTIST_VISIT(ID, DENTIST_NAME, VISIT_TIME) VALUES(DEFAULT, ?, ?)", dentistName, visitTime);
     }
 
     //Visiidi muutmine
@@ -61,6 +58,13 @@ public class DentistVisitService {
         //TODO implementation
         jdbcTemplate.update("UPDATE DENTIST_VISIT SET DENTIST_NAME = ?, VISIT_TIME = ? WHERE ID = ?", dentistName, visitTime, visitId);
     }
+
+    //Visiidi kustutamine
+    public int delete(long id) {
+        return jdbcTemplate.update("DELETE FROM DENTIST_VISIT where id=?", new Object[] { id });
+    }
+
+
 
 
 

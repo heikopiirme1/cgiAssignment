@@ -96,8 +96,8 @@ button {
     cursor: pointer;
     color: #fff;
     text-align: center;
-    margin-top: 18px;
     transition: 0.2s;
+    width: 200px;
 }
 
 .editBtn {
@@ -116,12 +116,18 @@ button {
     background-color: #e74c3c;
     color: #FFF;
     border: 1px solid #e74c3c;
+    margin-bottom: 5px;
 }
 
 .deleteBtn:hover {
     background-color: #c03f31;
     color: #FFF;
     border: 1px solid #c03f31;
+}
+
+.buttons {
+    margin-top: 24px;
+    margin-bottom: 5px;
 }
 
 button:hover {
@@ -140,4 +146,8 @@ button a:-webkit-any-link  {
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
+}
+
+form {
+    margin-bottom: 0;
 }

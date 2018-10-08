@@ -14,17 +14,18 @@
     </div>
     <div class="visit">
         <h1 class="headline" th:text="${'Registreering nr. ' + dentistVisit.visitId}"></h1>
-        <select th:required="true"  th:field="*{dentistVisit.dentistName}">
-            <option th:value="'Eha Raudreha'" th:text="'Eha Raudreha'"></option>
-            <option th:value="'Heli Redel'" th:text="'Heli Redel'" th:selected="true"></option>
-            <option th:value="'Mait Kuusevaik'" th:text="'Mait Kuusevaik'"></option>
-        </select>
-        <input type="datetime-local" th:field="*{dentistVisit.visitTime}" th:required="true" th:value="${dentistVisit.visitTime}"/>
-        <div>
-            <a th:href="@{|/results/update/${dentistVisit.visitId}|}"><button class="editBtn"><i class="far fa-edit"></i></button></a>
-            <a th:href="@{|/results/delete/${dentistVisit.visitId}|}"><button class="deleteBtn"><i class="far fa-trash-alt"></i></button></a>
-            <a th:href="@{/results}"><button><i class="fas fa-arrow-left"></i></button></a>
-        </div>
+        <form method="post" modelAttribute="dentistVisit" th:action="@{'/results/update'}" action="${putRegisterForm}">
+            <input type="hidden" th:field="*{dentistVisit.visitId}"/>
+            <select th:required="true"  th:field="*{dentistVisit.dentistName}">
+                <option th:value="'Eha Raudreha'" th:text="'Eha Raudreha'"></option>
+                <option th:value="'Heli Redel'" th:text="'Heli Redel'" th:selected="true"></option>
+                <option th:value="'Mait Kuusevaik'" th:text="'Mait Kuusevaik'"></option>
+            </select>
+            <input type="datetime-local" th:field="*{dentistVisit.visitTime}" th:required="true" th:value="${dentistVisit.visitTime}"/><br />
+            <button type="submit" class="editBtn buttons"><i class="far fa-edit"></i></button>
+        </form>
+            <a class="buttons" th:href="@{|/results/delete/${dentistVisit.visitId}|}"><button class="deleteBtn"><i class="far fa-trash-alt"></i></button></a><br />
+            <a class="buttons" href="/results"><button><i class="fas fa-arrow-left"></i></button></a>
     </div>
 </body>
 </html>
