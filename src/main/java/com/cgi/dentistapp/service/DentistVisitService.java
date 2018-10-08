@@ -57,9 +57,9 @@ public class DentistVisitService {
     }
 
     //Visiidi muutmine
-    public int update(DentistVisitDTO dentistVisitDTO) {
-        return jdbcTemplate.update("UPDATE DENTIST_VISIT " + " SET DENTIST_NAME = ?, VISIT_TIME = ? " + " where id = ?",
-                new Object[] { dentistVisitDTO.getDentistName(), dentistVisitDTO.getVisitTime(), dentistVisitDTO.getVisitId() });
+    public void updateVisit(long visitId, String dentistName, String visitTime) {
+        //TODO implementation
+        jdbcTemplate.update("UPDATE DENTIST_VISIT SET DENTIST_NAME = ?, VISIT_TIME = ? WHERE ID = ?", dentistName, visitTime, visitId);
     }
 
 

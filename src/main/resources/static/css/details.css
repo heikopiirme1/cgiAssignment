@@ -113,15 +113,15 @@ button {
 }
 
 .deleteBtn {
-    background-color: #FFF;
-    color: #e74c3c;
+    background-color: #e74c3c;
+    color: #FFF;
     border: 1px solid #e74c3c;
 }
 
 .deleteBtn:hover {
-    background-color: #e74c3c;
+    background-color: #c03f31;
     color: #FFF;
-    border: 1px solid #e74c3c;
+    border: 1px solid #c03f31;
 }
 
 button:hover {

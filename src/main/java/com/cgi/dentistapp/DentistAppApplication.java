@@ -27,7 +27,6 @@ public class DentistAppApplication implements CommandLineRunner {
     public void run(String... args) throws Exception {
         logger.info("All visits 1 -> {}", repository.findAll());
         logger.info("Delete visit id 2 -> {}", repository.delete(2));
-        logger.info("Update 3 -> {}", repository.update(new DentistVisitDTO(3, "Uuendatud nimi", "2018-10-25T22:30")));
         logger.info("Visit id 2 -> {}", repository.findById(3));
     }
 }

@@ -52,4 +52,17 @@ public class DentistAppController extends WebMvcConfigurerAdapter {
         dentistVisitService.addVisit(dentistVisitDTO.getDentistName(), dentistVisitDTO.getVisitTime());
         return "redirect:/results";
     }
+
+    @RequestMapping(value="/results/delete/{id}", method= RequestMethod.GET)
+    public String delete(@PathVariable(value="id") long id) {
+        dentistVisitService.delete(id);
+        return "redirect:/results";
+    }
+
+    @PostMapping("/results/{id}")
+    public String putRegisterForm(@PathVariable(value="id") long id, @Valid DentistVisitDTO dentistVisitDTO) {
+
+        dentistVisitService.updateVisit(id, dentistVisitDTO.getDentistName(), dentistVisitDTO.getVisitTime());
+        return "redirect:/results";
+    }
 }
