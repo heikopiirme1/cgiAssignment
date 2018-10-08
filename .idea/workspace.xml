@@ -2,12 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aae9fad0-118b-44c4-92c7-2fff48cfc177" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cgi/dentistapp/DentistAppApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgi/dentistapp/DentistAppApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cgi/dentistapp/controller/DentistAppController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgi/dentistapp/controller/DentistAppController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/cgi/dentistapp/service/DentistVisitService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/cgi/dentistapp/service/DentistVisitService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/data.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/details.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/details.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/details.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,6 +24,7 @@
           <entry key="css" value="5" />
           <entry key="html" value="7" />
           <entry key="java" value="15" />
+          <entry key="md" value="1" />
           <entry key="properties" value="2" />
           <entry key="sql" value="7" />
           <entry key="xml" value="2" />
@@ -39,6 +35,7 @@
           <entry key="CSS" value="5" />
           <entry key="HTML" value="7" />
           <entry key="JAVA" value="15" />
+          <entry key="Markdown" value="1" />
           <entry key="Properties" value="2" />
           <entry key="SQL" value="7" />
           <entry key="XML" value="2" />
@@ -49,6 +46,7 @@
           <entry key="css" value="3763" />
           <entry key="html" value="2539" />
           <entry key="java" value="3206" />
+          <entry key="md" value="623" />
           <entry key="sql" value="189" />
         </counts>
       </usages-collector>
@@ -57,6 +55,7 @@
           <entry key="CSS" value="3763" />
           <entry key="HTML" value="2539" />
           <entry key="JAVA" value="3206" />
+          <entry key="Markdown" value="623" />
           <entry key="SQL" value="189" />
         </counts>
       </usages-collector>
@@ -148,11 +147,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/details.css">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="196">
               <caret line="128" column="18" selection-start-line="128" selection-start-column="18" selection-end-line="128" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="272">
+                <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -162,15 +173,6 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
               <caret line="15" column="64" lean-forward="true" selection-start-line="15" selection-start-column="24" selection-end-line="15" selection-end-column="64" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/templates/form.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="94">
-              <caret line="13" column="93" lean-forward="true" selection-start-line="13" selection-start-column="32" selection-end-line="13" selection-end-column="93" />
             </state>
           </provider>
         </entry>
@@ -208,6 +210,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/data.sql" />
         <option value="$PROJECT_DIR$/src/main/resources/templates/details.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/details.css" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -364,7 +367,7 @@
     <property name="RequestMappingsPanelWidth2" value="75" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539012071181" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1539012651444" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -417,12 +420,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1538663192292</updated>
-      <workItem from="1538663195171" duration="75521000" />
+      <workItem from="1538663195171" duration="76433000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75521000" />
+    <option name="totallyTimeSpent" value="76433000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -434,7 +437,7 @@
       <window_info id="Capture Tool" order="3" />
       <window_info id="Web" order="4" side_tool="true" />
       <window_info id="Designer" order="5" />
-      <window_info content_ui="combo" id="Project" order="6" visible="true" weight="0.25" />
+      <window_info active="true" content_ui="combo" id="Project" order="6" visible="true" weight="0.25" />
       <window_info id="Structure" order="7" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -445,7 +448,7 @@
       <window_info anchor="bottom" id="Spring" order="6" weight="0.329718" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="9" visible="true" weight="0.329718" />
+      <window_info anchor="bottom" id="Run" order="9" visible="true" weight="0.329718" />
       <window_info anchor="bottom" id="Debug" order="10" weight="0.3991323" />
       <window_info anchor="bottom" id="Cvs" order="11" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="12" weight="0.4" />
@@ -623,6 +626,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="196">
           <caret line="128" column="18" selection-start-line="128" selection-start-column="18" selection-end-line="128" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="272">
+            <caret line="16" lean-forward="true" selection-start-line="16" selection-end-line="16" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
