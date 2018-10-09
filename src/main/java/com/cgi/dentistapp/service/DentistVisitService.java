@@ -47,6 +47,11 @@ public class DentistVisitService {
                 new DentistVisitRowMapper());
     }
 
+    //Visiidid nime järgi
+    public List<DentistVisitDTO> findByName(String dentistName) {
+        return jdbcTemplate.query("SELECT * FROM DENTIST_VISIT WHERE DENTIST_NAME=? ORDER BY VISIT_TIME", new Object[] { dentistName }, new DentistVisitRowMapper());
+    }
+
     //Visiidi lisamine
     public void addVisit(String dentistName, String visitTime) {
         //TODO implementation

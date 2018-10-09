@@ -34,6 +34,13 @@ public class DentistAppController extends WebMvcConfigurerAdapter {
     @RequestMapping("/results")
     public String visitsList(Model model) {
         model.addAttribute("visits", dentistVisitService.listAll());
+        model.addAttribute("dentistVisit", new DentistVisitDTO());
+        return "results";
+    }
+
+    @RequestMapping(value="/results/name/{dentistName}", method= RequestMethod.GET)
+    public String detail(@PathVariable(value="dentistName") String dentistName, Model model) {
+        model.addAttribute("visits", dentistVisitService.findByName(dentistName));
         return "results";
     }
 

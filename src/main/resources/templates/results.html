@@ -8,20 +8,38 @@
     <h1 class="headerTitle">CGI hambaravi</h1>
     <ul class="nav">
         <li><a class="navLink navItem" th:href="@{/}">Lisa visiit</a></li>
-        <li class="active"><a class="navLink navItem active" href="#">Kõik visiidid</a></li>
+        <li class="active"><a class="navLink navItem active" href="/results">Kõik visiidid</a></li>
     </ul>
 </div>
 <div class="visitList">
-    <div class="visit" th:each="visit : ${visits}">
-        <a class="link" th:href="@{|/results/${visit.visitId}|}">
-            <div class="listItem" >
-                <span class="visitId" th:text="${visit.visitId}"></span>
-                <p class="visitTime" th:text="${'Visiidi aeg: ' + visit.visitTime}"></p>
-                <span class="dentistName" th:text="${visit.dentistName}"></span>
-            </div>
-        </a>
+    <div class="search">
+            <select id="nameSelect" th:required="true">
+                <option value="" th:text="'Kõik visiidid'"></option>
+                <option th:value="'Eha Raudreha'" th:text="'Eha Raudreha'"></option>
+                <option th:value="'Heli Redel'" th:text="'Heli Redel'"></option>
+                <option th:value="'Mait Kuusevaik'" th:text="'Mait Kuusevaik'"></option>
+            </select><button onclick="redirect()" class="deleteBtn">Otsi</button>
     </div>
+        <div class="visit" th:each="visit : ${visits}">
+            <a class="link" th:href="@{|/results/${visit.visitId}|}">
+                <div class="listItem" >
+                    <span class="visitId" th:text="${visit.visitId}"></span>
+                    <p class="visitTime"><span><b>Visiidi aeg: </b></span><span th:text="${visit.visitTime}"></span></p>
+                    <span class="dentistName" th:text="${visit.dentistName}"></span>
+                </div>
+            </a>
+        </div>
 </div>
+<script>
+    function redirect() {
+        var selectValue = document.getElementById("nameSelect").value;
+        if (selectValue == ""){
+            window.location.replace("/results");
+        } else {
+            window.location.replace("/results/name/" + selectValue);
+        }
 
+    }
+</script>
 </body>
 </html>

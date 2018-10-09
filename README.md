@@ -1,4 +1,4 @@
-# CGI Java assignment
+# CGI Java töö
 **Heiko Piirme 2018**
 
 ## CGI hambaravi
