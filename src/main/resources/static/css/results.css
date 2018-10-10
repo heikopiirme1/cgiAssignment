@@ -174,3 +174,36 @@ button:hover {
     margin-bottom: 15px;
     text-align: center;
 }
+
+@media only screen and (min-width: 1025px) and (max-width: 1600px) {
+    .visitList {
+        width: 35%;
+    }
+}
+
+@media only screen and (min-width: 621px) and (max-width: 1024px) {
+    .visitList {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 620px) {
+    .visitList {
+        width: 85%;
+        height: 80%;
+        margin-top: 8%;
+    }
+
+    .headerTitle {
+        display: none;
+    }
+
+    .dentistName {
+        border-top: 1px solid #00b894;
+        text-align: center;
+        width: 100%;
+        margin: 0;
+        padding: 10px 0;
+    }
+
+}

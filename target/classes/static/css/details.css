@@ -151,3 +151,19 @@ button a:-webkit-any-link  {
 form {
     margin-bottom: 0;
 }
+
+@media only screen and (min-width: 769px) and (max-width: 1400px) {
+    .visit {
+        width: 20%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .visit {
+        width: 70%;
+    }
+
+    .headerTitle {
+        display: none;
+    }
+}
